@@ -34,7 +34,7 @@
                                     {% if member.status == 'Dead' %}bg-danger{% endif %}
                                 ">
                                     <th scope="row">{{ loop.index }}</th>
-                                    <td>{{ member.name }}</td>
+                                    <td>{{ member.name }} {{attribute(member, 'reg-number')}}</td>
                                     <td>{{ member.role }}</td>
                                     <td>{{ member.status }}</td>
                                 </tr>

@@ -10,16 +10,19 @@ echo $twig->render('index.html', array(
     'crew' => array(
         array(
             'name' => 'Ellen Ripley',
+            'reg-number' => '018345',
             'role' => 'Warrent Officer',
             'status' => 'Alive',
         ),
         array(
             'name' => 'Ash',
+            'reg-number' => '018345',
             'role' => 'Science Officer',
             'status' => 'Dead',
         ),
         array(
             'name' => 'Parker',
+            'reg-number' => '018345',
             'role' => 'Cheif Engineer',
             'status' => 'Alive',
         ),
