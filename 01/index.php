@@ -5,7 +5,7 @@ require_once '../vendor/autoload.php';;
 $loader = new \Twig\Loader\FilesystemLoader('../templates');
 $twig = new \Twig\Environment($loader);
 
-echo $twig->render('index.html', array(
+echo $twig->render('crew.html', array(
     'title' => 'Twig Turoial 01',
     'sub-title' => 'Documentation on using Twig template data',
     'crew' => array(
