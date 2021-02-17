@@ -21,6 +21,23 @@
         </div>
     </div>
 
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+                
+                {% block notice %}
+                
+                    <h2>Important Notice!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porta orci erat, in fringilla tellus tincidunt nec. Cras fermentum ex id tortor venenatis, non vehicula magna vestibulum. Morbi accumsan dapibus libero. Etiam fermentum diam orci, vitae ultricies ipsum porttitor ut.
+                    Fusce eget imperdiet nulla. Maecenas eleifend, nibh sit amet suscipit egestas, justo mi vulputate leo, quis suscipit felis elit eu tellus. In odio lacus, pretium sit amet ligula ac, venenatis iaculis metus. Donec pellentesque faucibus rhoncus. Sed eu viverra eros. Sed quis elementum sem. Morbi volutpat dolor nec lectus aliquet condimentum. Nulla nisl ligula, sagittis quis nulla sit amet, posuere facilisis dolor.</p>
+                
+                {% endblock notice %}
+
+            </div>
+        </div>
+    </div>
+
     {% include "footer.html" %}
 
   </body>
