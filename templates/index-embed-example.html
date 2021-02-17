@@ -12,7 +12,22 @@
     <div class="container">
 
         <div class="row">
-          {% embed 'grid.html' %}{% endembed %}
+          {% embed 'grid.html' %}
+          
+            {% block col2 %}
+              <div class="row">
+                <div class="col-sm-6">
+                    <h2>1</h2>
+                    <p>Sed quis elementum sem. Morbi volutpat dolor nec lectus aliquet condimentum.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h2>1</h2>
+                    <p>Sed quis elementum sem. Morbi volutpat dolor nec lectus aliquet condimentum.</p>
+                </div>
+              </div>
+            {% endblock col2 %}
+          
+          {% endembed %}
         </div>
     </div>
 
