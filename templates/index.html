@@ -37,8 +37,6 @@
                     </thead>
                         <tbody>
                             {% for member in crew %}
-
-                            {% set items = ['odd', 'even'] %}
                            
                             {% set class = '' %}
                             {% if member.status == 'Alive' %}
@@ -49,7 +47,7 @@
                                 {% set class = 'bg-danger' %}
                             {% endif %}
 
-                                <tr class="{{class}} {{ cycle(items, loop.index0)}}">
+                                <tr class="{{class}} {{ cycle(['odd', 'even'], loop.index0)}}">
                                     <th scope="row">{{ loop.index }}</th>
                                     <td>{{ member.name }} {{attribute(member, 'reg-number')}}</td>
                                     <td>{{ member.role }}</td>
