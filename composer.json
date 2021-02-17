@@ -6,5 +6,7 @@
             "email": "john@example.com"
         }
     ],
-    "require": {}
+    "require": {
+        "twig/twig": "^3.0"
+    }
 }
