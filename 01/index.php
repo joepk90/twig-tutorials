@@ -7,6 +7,7 @@ $twig = new \Twig\Environment($loader);
 
 echo $twig->render('index.html', array(
     'title' => 'Twig Turoial 01',
+    'sub-title' => 'Documentation on using Twig template data',
     'crew' => array(
         array(
             'name' => 'Ellen Ripley',
