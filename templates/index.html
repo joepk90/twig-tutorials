@@ -7,19 +7,7 @@
   </head>
   <body>
     
-    <div class="container">
-
-        <h1>{{title}}</h1>
-        <p>{{attribute(_context, 'sub-title')}}</p>
-
-        <div class="row">
-            <div class="col-sm-12">
-                
-                {% block content %} {% endblock content %}
-
-            </div>
-        </div>
-    </div>
+    {% block content %} {% endblock content %}
 
     <div class="container">
 
