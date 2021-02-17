@@ -31,10 +31,19 @@
                     </thead>
                         <tbody>
                             {% for member in crew %}
-                                <tr class="
-                                    {% if member.status == 'Alive' %}bg-success{% endif %}
-                                    {% if member.status == 'Dead' %}bg-danger{% endif %}
-                                ">
+
+                            {% set class = '' %}
+                            {% if member.status == 'Alive' %}
+                                {% set class = 'bg-success' %}
+                            {% endif %}
+
+                            {% if member.status == 'Dead' %}
+                                {% set class = 'bg-danger' %}
+                            {% endif %}
+
+                            {% if member.status == 'Dead' %}bg-danger{% endif %}
+
+                                <tr class="{{class}}">
                                     <th scope="row">{{ loop.index }}</th>
                                     <td>{{ member.name }} {{attribute(member, 'reg-number')}}</td>
                                     <td>{{ member.role }}</td>
