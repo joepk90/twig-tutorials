@@ -47,7 +47,7 @@
                                     <th scope="row">{{ loop.index }}</th>
                                     <td>{{ member.name }} {{attribute(member, 'reg-number')}}</td>
                                     <td>{{ member.role }}</td>
-                                    <td>{{ member.status | upper }}</td>
+                                    <td>{{ member.status | upper | reverse }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>
