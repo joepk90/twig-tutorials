@@ -1,0 +1,44 @@
+{% block content%}
+
+<div class="container">
+
+    <h1>{{title}}</h1>
+    <p>{{attribute(_context, 'sub-title')}}</p>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        {% for member in crew %}
+                    
+                        {% set class = '' %}
+                        {% if member.status == 'Alive' %}
+                            {% set class = 'success' %}
+                        {% endif %}
+
+                        {% if member.status == 'Dead' %}
+                            {% set class = 'danger' %}
+                        {% endif %}
+
+                            <tr class="{{'bg-' ~ class}} {{ cycle(['odd', 'even'], loop.index0)}}">
+                                <th scope="row">{{ loop.index }}</th>
+                                <td>{{ member.name }} {{attribute(member, 'reg-number')}}</td>
+                                <td>{{ member.role }}</td>
+                                <td>{{ member.status | upper }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
